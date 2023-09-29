@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         moveDir.Normalize();
         rb.velocity = new Vector3(
             moveDir.x * Speed.x,
-            0f,
+            rb.velocity.y,
             moveDir.y * Speed.z
         );
     }
