@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 Speed = new Vector2(-4f, 4f);
+    private Vector3 Speed = new Vector3(4f, 0f, 4f);
 
     private Rigidbody rb;
     private Vector2 moveDir;
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector3(
             moveDir.x * Speed.x,
             0f,
-            moveDir.y * Speed.y
+            moveDir.y * Speed.z
         );
     }
 
