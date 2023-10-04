@@ -45,4 +45,14 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision other) 
+    {
+        Dialogue dialogue = other.collider.transform.GetComponent<Dialogue>();
+        if (dialogue != null)
+        {
+            // Iniciar Sistema de Dialogos
+            DialogueManager.Instance.StartDialogue(dialogue);
+        }
+    }
+
 }
