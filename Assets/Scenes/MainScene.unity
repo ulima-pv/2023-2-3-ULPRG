@@ -12009,6 +12009,9 @@ MonoBehaviour:
   - CharacterName: Heroe
     Text: Como estas
     Sprite: {fileID: -1233415271, guid: 05d54b3380ce3414fb75a08063f8dfb2, type: 3}
+  - CharacterName: Heroe
+    Text: Fin.
+    Sprite: {fileID: -1233415271, guid: 05d54b3380ce3414fb75a08063f8dfb2, type: 3}
 --- !u!4 &1244222339 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 393699456270058917, guid: cb7c9e37a97831146a0e62bece5b4af0, type: 3}

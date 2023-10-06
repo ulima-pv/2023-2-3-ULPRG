@@ -31,8 +31,14 @@ public class DialogueManager : MonoBehaviour
     public void NextDialogue()
     {
         currentDialogueIndex++;
-        Interaction nextInteraction = currentDialogue.interactions[currentDialogueIndex];
-        OnDialogueNext?.Invoke(nextInteraction);
+        if (currentDialogueIndex < currentDialogue.interactions.Count)
+        {
+            Interaction nextInteraction = currentDialogue.interactions[currentDialogueIndex];
+            OnDialogueNext?.Invoke(nextInteraction);
+        }else
+        {
+            FinishDialogue();
+        }
 
     }
 
