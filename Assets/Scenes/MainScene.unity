@@ -10184,6 +10184,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1025981782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1025981783}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1025981783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025981782}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.16, z: -0.176}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1348042663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1038903450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 393699456270058917, guid: cb7c9e37a97831146a0e62bece5b4af0, type: 3}
@@ -13176,10 +13207,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348042663}
+  - component: {fileID: 1348042665}
   - component: {fileID: 1348042664}
   - component: {fileID: 1348042667}
   - component: {fileID: 1348042666}
-  - component: {fileID: 1348042665}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -13201,6 +13232,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 410132042}
+  - {fileID: 1025981783}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1348042664
@@ -13237,8 +13269,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1264462464}
-  DistanceToFollow: 3
+  DistanceToFollow: 4
+  DistanceToAttack: 3
   Speed: 1
+  prefabStone: {fileID: 3659748808857712354, guid: e8c45c0803ca838418e5d2f00ae955c2, type: 3}
+  FirePoint: {fileID: 1025981783}
 --- !u!136 &1348042666
 CapsuleCollider:
   m_ObjectHideFlags: 0

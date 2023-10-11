@@ -26,6 +26,27 @@ public class FollowState : State
             }
         );
         Transitions.Add(transitionFollowToIdle);
+
+        // Transicion Follow -> Attack
+        Transition transitionFollowToAttack = new Transition(
+            isValid: () =>{
+                float distance = Vector3.Distance(
+                    controller.Player.position,
+                    controller.transform.position
+                );
+                if (distance < controller.DistanceToAttack)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+            },
+            getNextState: () => {
+                return new AttackState(controller);
+            }
+        );
+        Transitions.Add(transitionFollowToAttack);
     }
 
 

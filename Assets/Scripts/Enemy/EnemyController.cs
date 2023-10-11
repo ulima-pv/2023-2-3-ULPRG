@@ -8,11 +8,14 @@ public class EnemyController : MonoBehaviour
     public IdleState IdleState;
     public FollowState FollowState;
 
-    public Transform Player;
-    
-    public Rigidbody rb {private set; get;}
-    public float DistanceToFollow;
+    public  Transform Player;
+    public float DistanceToFollow = 4f;
+    public float DistanceToAttack = 3f;
     public float Speed = 1f;
+    public GameObject prefabStone;
+    public Transform FirePoint;
+
+    public Rigidbody rb {private set; get;}
 
     private State currentState;
 
@@ -46,6 +49,13 @@ public class EnemyController : MonoBehaviour
             }
         }
         currentState.OnUpdate();    
+    }
+
+    public void Fire()
+    {
+        GameObject stone = Instantiate(prefabStone, FirePoint.position, Quaternion.identity);
+        stone.GetComponent<StoneMovement>().Direction =
+            Player.position - transform.position;
     }
 
 }
