@@ -9462,7 +9462,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.26, z: -5.453}
+  m_LocalPosition: {x: 5.76, y: 1.26, z: -5.453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10621,7 +10621,7 @@ Transform:
   m_GameObject: {fileID: 1070244429}
   serializedVersion: 2
   m_LocalRotation: {x: 0.201998, y: 0.0029380969, z: -0.0006058342, w: 0.9793814}
-  m_LocalPosition: {x: 0, y: 1.26, z: -5.453}
+  m_LocalPosition: {x: 5.76, y: 1.26, z: -5.453}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12198,7 +12198,7 @@ Transform:
   m_GameObject: {fileID: 1264462463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.983}
+  m_LocalPosition: {x: 5.76, y: 0, z: -1.983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13176,8 +13176,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348042663}
-  - component: {fileID: 1348042665}
   - component: {fileID: 1348042664}
+  - component: {fileID: 1348042667}
+  - component: {fileID: 1348042666}
+  - component: {fileID: 1348042665}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -13234,6 +13236,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5820c880773500745a5fefdbe90b9e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1264462464}
+  DistanceToFollow: 3
+  Speed: 1
+--- !u!136 &1348042666
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348042662}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.21
+  m_Height: 0
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.24, z: 0}
+--- !u!54 &1348042667
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348042662}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1001 &1349971782
 PrefabInstance:
   m_ObjectHideFlags: 0
