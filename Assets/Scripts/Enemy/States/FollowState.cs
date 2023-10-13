@@ -61,6 +61,8 @@ public class FollowState : State
         Vector3 dir = (
             controller.Player.position - controller.transform.position
         ).normalized;
+        controller.animator.SetFloat("Horizontal", dir.x);
+        controller.animator.SetFloat("Vertical", dir.z);
         controller.rb.velocity = dir * controller.Speed;
 
     }

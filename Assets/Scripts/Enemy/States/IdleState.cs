@@ -34,6 +34,7 @@ public class IdleState : State
     {
         Debug.Log("Estado Idle Start");
         controller.rb.velocity = Vector3.zero;
+        controller.animator.SetFloat("Vertical", -1f);
     }
 
     public override void OnUpdate()

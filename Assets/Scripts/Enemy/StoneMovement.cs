@@ -18,16 +18,18 @@ public class StoneMovement : MonoBehaviour
     private void Awake() 
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = Direction.normalized * Speed;
+        
     }
 
     private void Start() 
     {
-            
+        
     }
 
     private void Update() 
     {
+        rb.velocity = Direction.normalized * Speed;
+        
         timer += Time.deltaTime;
         if (timer >= timeToDestroy)
         {

@@ -5,19 +5,28 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody)), RequireComponent(typeof(CapsuleCollider))]
 public class EnemyController : MonoBehaviour
 {
+    #region States
     public IdleState IdleState;
     public FollowState FollowState;
+    private State currentState;
+    #endregion
 
+    #region Parameters
     public  Transform Player;
     public float DistanceToFollow = 4f;
     public float DistanceToAttack = 3f;
     public float Speed = 1f;
     public GameObject prefabStone;
     public Transform FirePoint;
+    public float CoolDownTime = 1.0f;
+    #endregion
 
+    #region Readonly Properties
     public Rigidbody rb {private set; get;}
+    public Animator animator {private set; get;}
+    #endregion
 
-    private State currentState;
+    
 
     private void Awake() 
     {
@@ -25,6 +34,7 @@ public class EnemyController : MonoBehaviour
         FollowState = new FollowState(this);
 
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
 
         // Seteamos el estado inicial
         currentState = IdleState;    
